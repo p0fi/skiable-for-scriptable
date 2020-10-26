@@ -13,7 +13,7 @@ It shows you:
 * Number of open lifts
 * Date of the last data update
 
-It currently supports 6 languages depending on which language your phone is set:
+It currently supports **6** languages depending on which language your phone is set:
 * English 🇬🇧
 * German 🇩🇪
 * French 🇫🇷
@@ -26,7 +26,7 @@ It currently supports 6 languages depending on which language your phone is set:
 
 1. Copy `skiable.js` into the Scriptable folder located in your iCloud Drive.
 2. Launch Scriptable and make sure that `skiable` is listed in the scripts view.
-3. Configure the ski resport you wish to display. The name of the resort must **exaclty** match the list on https://www.bergfex.at/oesterreich/schneewerte/
+3. Configure the ski resport you wish to display. The name of the resort must **exaclty** match the name on the list at https://www.bergfex.at/oesterreich/schneewerte/
 4. Run the script and verify that everything is working correctly.
 5. Go back to your home screen and add a **small** Scriptable widget.
 6. Edit the Scriptable widget and choose `skiable` as the script. 
