@@ -129,13 +129,21 @@ function getLocalizedRequestURL() {
 
 function convertToObject(html) {
   const tmp = html.replace(/(<([^>]+)>)/gi, '');
-  const lines = tmp.replace(/^\n/gm, '').split('\n');
-
+  var lines = tmp.replace(/^\n/gm, '').split('\n');
+  // replace '-' with '0'
+  lines = lines.map((x) => (x == '-' ? '0' : x));
+  // remove cm from summit height
+  if (typeof lines[2] === 'string') {
+    lines[2] = lines[2].match(/\d+/)[0];
+  }
+  // fix missing lifts data
+  if (lines.length == 6) {
+    lines.splice(4, 0, '0');
+  }
   return {
     resort: lines[0],
     valley: lines[1],
-    summit: lines[2].match(/\d+/),
-    fresh: lines[3],
+    summit: lines[2],
     lifts: lines[4],
     date: lines[5],
   };
