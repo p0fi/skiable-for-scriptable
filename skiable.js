@@ -10,7 +10,8 @@
   https://www.bergfex.at/oesterreich/schneewerte/
 */
 
-const skiresort = 'Sölden';
+
+const skiresort = args.widgetParameter || 'Sölden';
 
 if (config.runsInWidget) {
   const size = config.widgetFamily;
